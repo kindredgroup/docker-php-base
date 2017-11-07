@@ -4,5 +4,6 @@ This repository contains a few base PHP containers which I use to build other co
 
 Currently supported version:
 
+  - 5.6
   - 7.0
   - 7.1
