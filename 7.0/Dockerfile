@@ -17,10 +17,11 @@ RUN set -x && DEBIAN_FRONTEND=noninteractive \
     libpng12-dev \
     libpq-dev \
     mysql-client \
+    bison \
     unzip \
   && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
   && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ \
-  && docker-php-ext-install gd intl json ldap mbstring opcache pdo pdo_mysql pdo_pgsql sockets zip \
+  && docker-php-ext-install gd intl json ldap mbstring opcache pdo_mysql pdo_pgsql sockets zip \
   && pecl install apcu igbinary \
   && cd /tmp && git clone --branch php7 https://github.com/php-memcached-dev/php-memcached \
   && cd php-memcached && phpize && ./configure && make && make install \
