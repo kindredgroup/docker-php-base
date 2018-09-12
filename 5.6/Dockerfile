@@ -1,4 +1,4 @@
-FROM php:5.6-apache
+FROM php:5.6-apache-jessie
 MAINTAINER karel.bemelmans@kindredgroup.com
 
 # install the PHP extensions we need
